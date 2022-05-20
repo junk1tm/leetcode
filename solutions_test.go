@@ -28,6 +28,25 @@ func TestTwoSum(t *testing.T) {
 	}
 }
 
+// 0009. Palindrome Number [Easy]
+func TestIsPalindrome(t *testing.T) {
+	tests := []struct {
+		number int
+		answer bool
+	}{
+		{number: 121, answer: true},
+		{number: -121, answer: false},
+		{number: 10, answer: false},
+	}
+
+	for i, tt := range tests {
+		t.Run(name(i), func(t *testing.T) {
+			result := leetcode.IsPalindrome(tt.number)
+			equal[E](t, result, tt.answer)
+		})
+	}
+}
+
 func name(i int) string {
 	return fmt.Sprintf("example %d", i+1)
 }
