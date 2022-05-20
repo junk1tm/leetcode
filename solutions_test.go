@@ -103,6 +103,26 @@ func TestIsValidParentheses(t *testing.T) {
 	}
 }
 
+// 0026. Remove Duplicates from Sorted Array [Easy]
+func TestRemoveDuplicates(t *testing.T) {
+	tests := []struct {
+		numbers []int
+		length  int
+		result  []int
+	}{
+		{numbers: []int{1, 1, 2}, length: 2, result: []int{1, 2}},
+		{numbers: []int{0, 0, 1, 1, 1, 2, 2, 3, 3, 4}, length: 5, result: []int{0, 1, 2, 3, 4}},
+	}
+
+	for i, tt := range tests {
+		t.Run(name(i), func(t *testing.T) {
+			length := leetcode.RemoveDuplicates(tt.numbers)
+			equal[E](t, length, tt.length)
+			equal[E](t, tt.numbers[:length], tt.result)
+		})
+	}
+}
+
 func name(i int) string {
 	return fmt.Sprintf("example %d", i+1)
 }
