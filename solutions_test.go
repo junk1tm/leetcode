@@ -47,6 +47,25 @@ func TestIsPalindrome(t *testing.T) {
 	}
 }
 
+// 0013. Roman to Integer [Easy]
+func TestRomanToInt(t *testing.T) {
+	tests := []struct {
+		roman   string
+		integer int
+	}{
+		{roman: "III", integer: 3},
+		{roman: "LVIII", integer: 58},
+		{roman: "MCMXCIV", integer: 1994},
+	}
+
+	for i, tt := range tests {
+		t.Run(name(i), func(t *testing.T) {
+			integer := leetcode.RomanToInt(tt.roman)
+			equal[E](t, integer, tt.integer)
+		})
+	}
+}
+
 func name(i int) string {
 	return fmt.Sprintf("example %d", i+1)
 }
