@@ -123,6 +123,27 @@ func TestRemoveDuplicates(t *testing.T) {
 	}
 }
 
+// 0027. Remove Element [Easy]
+func TestRemoveElement(t *testing.T) {
+	tests := []struct {
+		numbers []int
+		value   int
+		length  int
+		result  []int
+	}{
+		{numbers: []int{3, 2, 2, 3}, value: 3, length: 2, result: []int{2, 2}},
+		{numbers: []int{0, 1, 2, 2, 3, 0, 4, 2}, value: 2, length: 5, result: []int{0, 1, 4, 0, 3}},
+	}
+
+	for i, tt := range tests {
+		t.Run(name(i), func(t *testing.T) {
+			length := leetcode.RemoveElement(tt.numbers, tt.value)
+			equal[E](t, length, tt.length)
+			equal[E](t, tt.numbers[:length], tt.result)
+		})
+	}
+}
+
 func name(i int) string {
 	return fmt.Sprintf("example %d", i+1)
 }
