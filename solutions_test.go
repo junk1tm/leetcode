@@ -66,6 +66,24 @@ func TestRomanToInt(t *testing.T) {
 	}
 }
 
+// 0014. Longest Common Prefix [Easy]
+func TestLongestCommonPrefix(t *testing.T) {
+	tests := []struct {
+		strings []string
+		prefix  string
+	}{
+		{strings: []string{"flower", "flow", "flight"}, prefix: "fl"},
+		{strings: []string{"dog", "racecar", "car"}, prefix: ""},
+	}
+
+	for i, tt := range tests {
+		t.Run(name(i), func(t *testing.T) {
+			prefix := leetcode.LongestCommonPrefix(tt.strings)
+			equal[E](t, prefix, tt.prefix)
+		})
+	}
+}
+
 func name(i int) string {
 	return fmt.Sprintf("example %d", i+1)
 }
