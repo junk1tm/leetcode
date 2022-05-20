@@ -84,6 +84,25 @@ func TestLongestCommonPrefix(t *testing.T) {
 	}
 }
 
+// 0020. Valid Parentheses [Easy]
+func TestIsValidParentheses(t *testing.T) {
+	tests := []struct {
+		input string
+		valid bool
+	}{
+		{input: "()", valid: true},
+		{input: "()[]{}", valid: true},
+		{input: "(]", valid: false},
+	}
+
+	for i, tt := range tests {
+		t.Run(name(i), func(t *testing.T) {
+			valid := leetcode.IsValidParentheses(tt.input)
+			equal[E](t, valid, tt.valid)
+		})
+	}
+}
+
 func name(i int) string {
 	return fmt.Sprintf("example %d", i+1)
 }
