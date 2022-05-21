@@ -6,6 +6,7 @@ import (
 	"testing"
 
 	"github.com/junk1tm/leetcode"
+	"github.com/junk1tm/leetcode/linkedlist"
 )
 
 // 0001. Two Sum [Easy]
@@ -24,6 +25,28 @@ func TestTwoSum(t *testing.T) {
 		t.Run(name(i), func(t *testing.T) {
 			indices := leetcode.TwoSum(tt.numbers, tt.target)
 			equal[E](t, indices, tt.indices)
+		})
+	}
+}
+
+// 0002. Add Two Numbers [Medium]
+func TestAddTwoNumbers(t *testing.T) {
+	listOf := linkedlist.New[int]
+
+	tests := []struct {
+		list1  *linkedlist.Node[int]
+		list2  *linkedlist.Node[int]
+		result *linkedlist.Node[int]
+	}{
+		{list1: listOf(2, 4, 3), list2: listOf(5, 6, 4), result: listOf(7, 0, 8)},
+		{list1: listOf(0), list2: listOf(0), result: listOf(0)},
+		{list1: listOf(9, 9, 9, 9, 9, 9, 9), list2: listOf(9, 9, 9, 9), result: listOf(8, 9, 9, 9, 0, 0, 0, 1)},
+	}
+
+	for i, tt := range tests {
+		t.Run(name(i), func(t *testing.T) {
+			result := leetcode.AddTwoNumbers(tt.list1, tt.list2)
+			assert[E](t, result.Equal(tt.result))
 		})
 	}
 }
@@ -189,6 +212,13 @@ type (
 	E *testing.T
 	F *testing.T
 )
+
+func assert[T E | F](t T, expr bool) {
+	(*testing.T)(t).Helper()
+	if !expr {
+		f(t)("assertion failed")
+	}
+}
 
 func equal[T E | F](t T, got, want any) {
 	(*testing.T)(t).Helper()
