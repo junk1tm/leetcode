@@ -144,6 +144,24 @@ func TestRemoveElement(t *testing.T) {
 	}
 }
 
+// 1769. Minimum Number of Operations to Move All Balls to Each Box [Medium]
+func TestMinOperations(t *testing.T) {
+	tests := []struct {
+		boxes      string
+		operations []int
+	}{
+		{boxes: "110", operations: []int{1, 1, 3}},
+		{boxes: "001011", operations: []int{11, 8, 5, 4, 3, 4}},
+	}
+
+	for i, tt := range tests {
+		t.Run(name(i), func(t *testing.T) {
+			operations := leetcode.MinOperations(tt.boxes)
+			equal[E](t, operations, tt.operations)
+		})
+	}
+}
+
 func name(i int) string {
 	return fmt.Sprintf("example %d", i+1)
 }
