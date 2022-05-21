@@ -126,6 +126,28 @@ func TestIsValidParentheses(t *testing.T) {
 	}
 }
 
+// 0021. Merge Two Sorted Lists [Easy]
+func TestMergeTwoLists(t *testing.T) {
+	listOf := linkedlist.New[int]
+
+	tests := []struct {
+		list1  *linkedlist.Node[int]
+		list2  *linkedlist.Node[int]
+		result *linkedlist.Node[int]
+	}{
+		{list1: listOf(1, 2, 4), list2: listOf(1, 3, 4), result: listOf(1, 1, 2, 3, 4, 4)},
+		{list1: nil, list2: nil, result: nil},
+		{list1: nil, list2: listOf(0), result: listOf(0)},
+	}
+
+	for i, tt := range tests {
+		t.Run(name(i), func(t *testing.T) {
+			result := leetcode.MergeTwoLists(tt.list1, tt.list2)
+			assert[E](t, result.Equal(tt.result))
+		})
+	}
+}
+
 // 0026. Remove Duplicates from Sorted Array [Easy]
 func TestRemoveDuplicates(t *testing.T) {
 	tests := []struct {

@@ -49,7 +49,7 @@ func TestNode_Equal(t *testing.T) {
 			name:   "both nil",
 			list1:  nil,
 			list2:  nil,
-			result: false,
+			result: true,
 		},
 	}
 

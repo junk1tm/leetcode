@@ -31,10 +31,6 @@ func (n *Node[T]) String() string {
 }
 
 func (n *Node[T]) Equal(n2 *Node[T]) bool {
-	if n == nil && n2 == nil {
-		return false
-	}
-
 	for ; n != nil && n2 != nil; n, n2 = n.Next, n2.Next {
 		if n.Value != n2.Value {
 			return false
