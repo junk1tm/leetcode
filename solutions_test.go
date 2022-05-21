@@ -144,6 +144,25 @@ func TestRemoveElement(t *testing.T) {
 	}
 }
 
+// 0028. Implement strStr() [Easy]
+func TestIndexOf(t *testing.T) {
+	tests := []struct {
+		haystack string
+		needle   string
+		index    int
+	}{
+		{haystack: "hello", needle: "ll", index: 2},
+		{haystack: "aaaaa", needle: "bba", index: -1},
+	}
+
+	for i, tt := range tests {
+		t.Run(name(i), func(t *testing.T) {
+			index := leetcode.IndexOf(tt.haystack, tt.needle)
+			equal[E](t, index, tt.index)
+		})
+	}
+}
+
 // 1769. Minimum Number of Operations to Move All Balls to Each Box [Medium]
 func TestMinOperations(t *testing.T) {
 	tests := []struct {
