@@ -51,6 +51,25 @@ func TestAddTwoNumbers(t *testing.T) {
 	}
 }
 
+// 0003. Longest Substring Without Repeating Characters [Medium]
+func TestLengthOfLongestSubstring(t *testing.T) {
+	tests := []struct {
+		input  string
+		length int
+	}{
+		{input: "pwwkew", length: 3},
+		{input: "abcabcbb", length: 3},
+		{input: "bbbbb", length: 1},
+	}
+
+	for i, tt := range tests {
+		t.Run(name(i), func(t *testing.T) {
+			length := leetcode.LengthOfLongestSubstring(tt.input)
+			equal[E](t, length, tt.length)
+		})
+	}
+}
+
 // 0009. Palindrome Number [Easy]
 func TestIsPalindrome(t *testing.T) {
 	tests := []struct {
