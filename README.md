@@ -16,7 +16,7 @@
 
 | Easy | Medium | Hard |
 |:----:|:------:|:----:|
-|9|3|0|
+|10|3|0|
 
 ### Solutions
 
@@ -33,4 +33,5 @@
 |26|[Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array)|Easy|[👀](0026_remove_duplicates_from_sorted_array.go) [✅](solutions_test.go#L170)|
 |27|[Remove Element](https://leetcode.com/problems/remove-element)|Easy|[👀](0027_remove_element.go) [✅](solutions_test.go#L190)|
 |28|[Implement strStr()](https://leetcode.com/problems/implement-strstr/)|Easy|[👀](0028_implement_strstr.go) [✅](solutions_test.go#L211)|
-|1769|[Minimum Number of Operations to Move All Balls to Each Box](https://leetcode.com/problems/minimum-number-of-operations-to-move-all-balls-to-each-box)|Medium|[👀](1769_minimum_number_of_operations_to_move_all_balls_to_each_box.go) [✅](solutions_test.go#L230)|
+|35|[Search Insert Position](https://leetcode.com/problems/search-insert-position)|Easy|[👀](0035_search_insert_position.go) [✅](solutions_test.go#L230)|
+|1769|[Minimum Number of Operations to Move All Balls to Each Box](https://leetcode.com/problems/minimum-number-of-operations-to-move-all-balls-to-each-box)|Medium|[👀](1769_minimum_number_of_operations_to_move_all_balls_to_each_box.go) [✅](solutions_test.go#L250)|

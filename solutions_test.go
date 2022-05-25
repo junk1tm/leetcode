@@ -227,6 +227,26 @@ func TestIndexOf(t *testing.T) {
 	}
 }
 
+// 0035. Search Insert Position [Easy]
+func TestSearchInsert(t *testing.T) {
+	tests := []struct {
+		numbers []int
+		target  int
+		index   int
+	}{
+		{numbers: []int{1, 3, 5, 6}, target: 5, index: 2},
+		{numbers: []int{1, 3, 5, 6}, target: 2, index: 1},
+		{numbers: []int{1, 3, 5, 6}, target: 7, index: 4},
+	}
+
+	for i, tt := range tests {
+		t.Run(name(i), func(t *testing.T) {
+			index := leetcode.SearchInsert(tt.numbers, tt.target)
+			equal[E](t, index, tt.index)
+		})
+	}
+}
+
 // 1769. Minimum Number of Operations to Move All Balls to Each Box [Medium]
 func TestMinOperations(t *testing.T) {
 	tests := []struct {
