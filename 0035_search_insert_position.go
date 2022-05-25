@@ -17,10 +17,8 @@ package leetcode
 //    -104 <= target <= 104
 //
 func SearchInsert(numbers []int, target int) int {
-	i, j := 0, len(numbers)-1
 	var k, middle int
-
-	for i <= j {
+	for i, j := 0, len(numbers)-1; i <= j; {
 		k = (i + j) / 2
 		middle = numbers[k]
 		switch {
