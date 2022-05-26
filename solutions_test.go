@@ -285,6 +285,25 @@ func TestLengthOfLastWord(t *testing.T) {
 	}
 }
 
+// 0066. Plus One [Easy]
+func TestPlusOne(t *testing.T) {
+	tests := []struct {
+		input  []int
+		output []int
+	}{
+		{input: []int{1, 2, 3}, output: []int{1, 2, 4}},
+		{input: []int{4, 3, 2, 1}, output: []int{4, 3, 2, 2}},
+		{input: []int{9}, output: []int{1, 0}},
+	}
+
+	for i, tt := range tests {
+		t.Run(name(i), func(t *testing.T) {
+			output := leetcode.PlusOne(tt.input)
+			equal[E](t, output, tt.output)
+		})
+	}
+}
+
 // 1769. Minimum Number of Operations to Move All Balls to Each Box [Medium]
 func TestMinOperations(t *testing.T) {
 	tests := []struct {
