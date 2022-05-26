@@ -266,6 +266,25 @@ func TestMaxSubArray(t *testing.T) {
 	}
 }
 
+// 0058. Length of Last Word [Easy]
+func TestLengthOfLastWord(t *testing.T) {
+	tests := []struct {
+		input  string
+		length int
+	}{
+		{input: "Hello World", length: 5},
+		{input: "   fly me   to   the moon  ", length: 4},
+		{input: "luffy is still joyboy", length: 6},
+	}
+
+	for i, tt := range tests {
+		t.Run(name(i), func(t *testing.T) {
+			length := leetcode.LengthOfLastWord(tt.input)
+			equal[E](t, length, tt.length)
+		})
+	}
+}
+
 // 1769. Minimum Number of Operations to Move All Balls to Each Box [Medium]
 func TestMinOperations(t *testing.T) {
 	tests := []struct {

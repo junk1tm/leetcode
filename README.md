@@ -16,7 +16,7 @@
 
 | Easy | Medium | Hard |
 |:----:|:------:|:----:|
-|11|3|0|
+|12|3|0|
 
 ### Solutions
 
@@ -35,4 +35,5 @@
 |28|[Implement strStr()](https://leetcode.com/problems/implement-strstr/)|Easy|[👀](0028_implement_strstr.go) [✅](solutions_test.go#L211)|
 |35|[Search Insert Position](https://leetcode.com/problems/search-insert-position)|Easy|[👀](0035_search_insert_position.go) [✅](solutions_test.go#L230)|
 |53|[Maximum Subarray](https://leetcode.com/problems/maximum-subarray)|Easy|[👀](0053_maximum_subarray.go) [✅](solutions_test.go#L250)|
-|1769|[Minimum Number of Operations to Move All Balls to Each Box](https://leetcode.com/problems/minimum-number-of-operations-to-move-all-balls-to-each-box)|Medium|[👀](1769_minimum_number_of_operations_to_move_all_balls_to_each_box.go) [✅](solutions_test.go#L269)|
+|58|[Length of Last Word](https://leetcode.com/problems/length-of-last-word)|Easy|[👀](0058_length_of_last_word.go) [✅](solutions_test.go#L269)|
+|1769|[Minimum Number of Operations to Move All Balls to Each Box](https://leetcode.com/problems/minimum-number-of-operations-to-move-all-balls-to-each-box)|Medium|[👀](1769_minimum_number_of_operations_to_move_all_balls_to_each_box.go) [✅](solutions_test.go#L288)|
