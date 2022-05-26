@@ -247,6 +247,25 @@ func TestSearchInsert(t *testing.T) {
 	}
 }
 
+// 0053. Maximum Subarray [Easy]
+func TestMaxSubArray(t *testing.T) {
+	tests := []struct {
+		numbers []int
+		sum     int
+	}{
+		{numbers: []int{-2, 1, -3, 4, -1, 2, 1, -5, 4}, sum: 6},
+		{numbers: []int{1}, sum: 1},
+		{numbers: []int{5, 4, -1, 7, 8}, sum: 23},
+	}
+
+	for i, tt := range tests {
+		t.Run(name(i), func(t *testing.T) {
+			sum := leetcode.MaxSubArray(tt.numbers)
+			equal[E](t, sum, tt.sum)
+		})
+	}
+}
+
 // 1769. Minimum Number of Operations to Move All Balls to Each Box [Medium]
 func TestMinOperations(t *testing.T) {
 	tests := []struct {
