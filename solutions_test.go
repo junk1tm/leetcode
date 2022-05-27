@@ -304,6 +304,25 @@ func TestPlusOne(t *testing.T) {
 	}
 }
 
+// 0067. Add Binary [Easy]
+func TestAddBinary(t *testing.T) {
+	tests := []struct {
+		a   string
+		b   string
+		sum string
+	}{
+		{a: "11", b: "1", sum: "100"},
+		{a: "1010", b: "1011", sum: "10101"},
+	}
+
+	for i, tt := range tests {
+		t.Run(name(i), func(t *testing.T) {
+			result := leetcode.AddBinary(tt.a, tt.b)
+			equal[E](t, result, tt.sum)
+		})
+	}
+}
+
 // 1769. Minimum Number of Operations to Move All Balls to Each Box [Medium]
 func TestMinOperations(t *testing.T) {
 	tests := []struct {
