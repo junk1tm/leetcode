@@ -323,6 +323,24 @@ func TestAddBinary(t *testing.T) {
 	}
 }
 
+// 0069. Sqrt(x) [Easy]
+func TestSqrt(t *testing.T) {
+	tests := []struct {
+		input  int
+		output int
+	}{
+		{input: 4, output: 2},
+		{input: 8, output: 2},
+	}
+
+	for i, tt := range tests {
+		t.Run(name(i), func(t *testing.T) {
+			output := leetcode.Sqrt(tt.input)
+			equal[E](t, output, tt.output)
+		})
+	}
+}
+
 // 1769. Minimum Number of Operations to Move All Balls to Each Box [Medium]
 func TestMinOperations(t *testing.T) {
 	tests := []struct {
