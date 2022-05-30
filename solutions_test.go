@@ -341,6 +341,25 @@ func TestSqrt(t *testing.T) {
 	}
 }
 
+// 0070. Climbing Stairs [Easy]
+func TestClimbingStairs(t *testing.T) {
+	tests := []struct {
+		steps int
+		paths int
+	}{
+		{steps: 2, paths: 2},
+		{steps: 3, paths: 3},
+		{steps: 4, paths: 3},
+	}
+
+	for i, tt := range tests {
+		t.Run(name(i), func(t *testing.T) {
+			ways := leetcode.ClimbingStairs(tt.steps)
+			equal[E](t, ways, tt.paths)
+		})
+	}
+}
+
 // 1769. Minimum Number of Operations to Move All Balls to Each Box [Medium]
 func TestMinOperations(t *testing.T) {
 	tests := []struct {

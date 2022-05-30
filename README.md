@@ -16,7 +16,7 @@
 
 | Easy | Medium | Hard |
 |:----:|:------:|:----:|
-|15|3|0|
+|16|3|0|
 
 ### Solutions
 
@@ -39,4 +39,5 @@
 |66|[Plus One](https://leetcode.com/problems/plus-one)|Easy|[👀](0066_plus_one.go) [✅](solutions_test.go#L288)|
 |67|[Add Binary](https://leetcode.com/problems/add-binary)|Easy|[👀](0067_add_binary.go) [✅](solutions_test.go#L307)|
 |69|[Sqrt(x)](https://leetcode.com/problems/sqrtx)|Easy|[👀](0069_sqrtx.go) [✅](solutions_test.go#L326)|
-|1769|[Minimum Number of Operations to Move All Balls to Each Box](https://leetcode.com/problems/minimum-number-of-operations-to-move-all-balls-to-each-box)|Medium|[👀](1769_minimum_number_of_operations_to_move_all_balls_to_each_box.go) [✅](solutions_test.go#L344)|
+|70|[Climbing Stairs](https://leetcode.com/problems/climbing-stairs)|Easy|[👀](0070_climbing_stairs.go) [✅](solutions_test.go#L344)|
+|1769|[Minimum Number of Operations to Move All Balls to Each Box](https://leetcode.com/problems/minimum-number-of-operations-to-move-all-balls-to-each-box)|Medium|[👀](1769_minimum_number_of_operations_to_move_all_balls_to_each_box.go) [✅](solutions_test.go#L363)|
