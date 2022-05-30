@@ -349,7 +349,6 @@ func TestClimbingStairs(t *testing.T) {
 	}{
 		{steps: 2, paths: 2},
 		{steps: 3, paths: 3},
-		{steps: 4, paths: 3},
 	}
 
 	for i, tt := range tests {
