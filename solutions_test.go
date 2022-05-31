@@ -359,6 +359,26 @@ func TestClimbingStairs(t *testing.T) {
 	}
 }
 
+// 0083. Remove Duplicates from Sorted List [Easy]
+func TestDeleteDuplicates(t *testing.T) {
+	listOf := linkedlist.New[int]
+
+	tests := []struct {
+		input  *linkedlist.Node[int]
+		output *linkedlist.Node[int]
+	}{
+		{input: listOf(1, 1, 2), output: listOf(1, 2)},
+		{input: listOf(1, 1, 2, 3, 3), output: listOf(1, 2, 3)},
+	}
+
+	for i, tt := range tests {
+		t.Run(name(i), func(t *testing.T) {
+			output := leetcode.DeleteDuplicates(tt.input)
+			assert[E](t, output.Equal(tt.output))
+		})
+	}
+}
+
 // 1769. Minimum Number of Operations to Move All Balls to Each Box [Medium]
 func TestMinOperations(t *testing.T) {
 	tests := []struct {
