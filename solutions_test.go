@@ -379,6 +379,27 @@ func TestDeleteDuplicates(t *testing.T) {
 	}
 }
 
+// 0088. Merge Sorted Array [Easy]
+func TestMergeSortedArrays(t *testing.T) {
+	tests := []struct {
+		m, n     int
+		numbers1 []int
+		numbers2 []int
+		result   []int
+	}{
+		{m: 3, n: 3, numbers1: []int{1, 2, 3, 0, 0, 0}, numbers2: []int{2, 5, 6}, result: []int{1, 2, 2, 3, 5, 6}},
+		{m: 1, n: 0, numbers1: []int{1}, numbers2: []int{}, result: []int{1}},
+		{m: 0, n: 1, numbers1: []int{0}, numbers2: []int{1}, result: []int{1}},
+	}
+
+	for i, tt := range tests {
+		t.Run(name(i), func(t *testing.T) {
+			leetcode.MergeSortedArrays(tt.numbers1, tt.numbers2, tt.m, tt.n)
+			equal[E](t, tt.numbers1, tt.result)
+		})
+	}
+}
+
 // 1769. Minimum Number of Operations to Move All Balls to Each Box [Medium]
 func TestMinOperations(t *testing.T) {
 	tests := []struct {
