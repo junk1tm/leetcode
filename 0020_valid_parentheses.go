@@ -1,6 +1,5 @@
 // https://leetcode.com/problems/valid-parentheses
-package leetcode
-
+//
 // 0020. Valid Parentheses [Easy]
 //
 // Given a string s containing just the characters '(', ')', '{', '}', '[' and
@@ -8,14 +7,16 @@ package leetcode
 //
 // An input string is valid if:
 //
-//    Open brackets must be closed by the same type of brackets.
-//    Open brackets must be closed in the correct order.
+//	Open brackets must be closed by the same type of brackets.
+//	Open brackets must be closed in the correct order.
 //
 // Constraints:
 //
-//    1 <= s.length <= 104
-//    s consists of parentheses only '()[]{}'.
-//
+//	1 <= s.length <= 104
+//	s consists of parentheses only '()[]{}'.
+
+package leetcode
+
 func IsValidParentheses(input string) bool {
 	if len(input)%2 != 0 {
 		return false
@@ -35,7 +36,7 @@ func IsValidParentheses(input string) bool {
 	}
 
 	var stack []rune
-	for _, curr := range []rune(input) {
+	for _, curr := range input {
 		if curr == '(' || curr == '[' || curr == '{' {
 			stack = append(stack, curr)
 			continue

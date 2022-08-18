@@ -1,6 +1,5 @@
 // https://leetcode.com/problems/remove-element
-package leetcode
-
+//
 // 0027. Remove Element [Easy]
 //
 // Given an integer array nums and
@@ -20,10 +19,12 @@ package leetcode
 //
 // Constraints:
 //
-//    0 <= nums.length <= 100
-//    0 <= nums[i] <= 50
-//    0 <= val <= 100
-//
+//	0 <= nums.length <= 100
+//	0 <= nums[i] <= 50
+//	0 <= val <= 100
+
+package leetcode
+
 func RemoveElement(numbers []int, value int) int {
 	i, j := 0, len(numbers)
 

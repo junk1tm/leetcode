@@ -1,6 +1,5 @@
 // https://leetcode.com/problems/climbing-stairs
-package leetcode
-
+//
 // 0070. Climbing Stairs [Easy]
 //
 // You are climbing a staircase. It takes n steps to reach the top.
@@ -10,8 +9,10 @@ package leetcode
 //
 // Constraints:
 //
-//    1 <= n <= 45
-//
+//	1 <= n <= 45
+
+package leetcode
+
 func ClimbingStairs(steps int) int {
 	switch steps {
 	case 1:

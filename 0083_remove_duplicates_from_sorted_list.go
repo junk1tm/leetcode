@@ -1,8 +1,5 @@
 // https://leetcode.com/problems/remove-duplicates-from-sorted-list
-package leetcode
-
-import "github.com/junk1tm/leetcode/linkedlist"
-
+//
 // 0083. Remove Duplicates from Sorted List [Easy]
 //
 // Given the head of a sorted linked list, delete all duplicates such that each
@@ -13,7 +10,11 @@ import "github.com/junk1tm/leetcode/linkedlist"
 //    The number of nodes in the list is in the range [0, 300].
 //    -100 <= Node.val <= 100
 //    The list is guaranteed to be sorted in ascending order.
-//
+
+package leetcode
+
+import "github.com/junk1tm/leetcode/linkedlist"
+
 func DeleteDuplicates(list *linkedlist.Node[int]) *linkedlist.Node[int] {
 	if list == nil || list.Next == nil {
 		return list

@@ -1,6 +1,5 @@
 // https://leetcode.com/problems/minimum-number-of-operations-to-move-all-balls-to-each-box
-package leetcode
-
+//
 // 1769. Minimum Number of Operations to Move All Balls to Each Box [Medium]
 //
 // You have n boxes. You are given a binary string boxes of length n, where
@@ -17,10 +16,12 @@ package leetcode
 //
 // Constraints:
 //
-//    n == boxes.length
-//    1 <= n <= 2000
-//    boxes[i] is either '0' or '1'.
-//
+//	n == boxes.length
+//	1 <= n <= 2000
+//	boxes[i] is either '0' or '1'.
+
+package leetcode
+
 func MinOperations(boxes string) []int {
 	result := make([]int, len(boxes))
 

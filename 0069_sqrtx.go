@@ -1,6 +1,5 @@
 // https://leetcode.com/problems/sqrtx
-package leetcode
-
+//
 // 0069. Sqrt(x) [Easy]
 //
 // Given a non-negative integer x, compute and return the square root of x.
@@ -13,8 +12,10 @@ package leetcode
 //
 // Constraints:
 //
-//    0 <= x <= 2^31 - 1
-//
+//	0 <= x <= 2^31 - 1
+
+package leetcode
+
 func Sqrt(square int) int {
 	pow := func(n int) int { return n * n }
 

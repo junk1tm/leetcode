@@ -1,6 +1,5 @@
 // https://leetcode.com/problems/roman-to-integer
-package leetcode
-
+//
 // 0013. Roman to Integer [Easy]
 //
 // Roman numerals are represented by seven different symbols: I, V, X, L, C, D
@@ -16,18 +15,20 @@ package leetcode
 // The same principle applies to the number nine, which is written as IX. There
 // are six instances where subtraction is used:
 //
-//    I can be placed before V (5) and X (10) to make 4 and 9.
-//    X can be placed before L (50) and C (100) to make 40 and 90.
-//    C can be placed before D (500) and M (1000) to make 400 and 900.
+//	I can be placed before V (5) and X (10) to make 4 and 9.
+//	X can be placed before L (50) and C (100) to make 40 and 90.
+//	C can be placed before D (500) and M (1000) to make 400 and 900.
 //
 // Given a roman numeral, convert it to an integer.
 //
 // Constraints:
 //
-//    1 <= s.length <= 15
-//    s contains only the characters ('I', 'V', 'X', 'L', 'C', 'D', 'M').
-//    It is guaranteed that s is a valid roman numeral in the range [1, 3999].
-//
+//	1 <= s.length <= 15
+//	s contains only the characters ('I', 'V', 'X', 'L', 'C', 'D', 'M').
+//	It is guaranteed that s is a valid roman numeral in the range [1, 3999].
+
+package leetcode
+
 func RomanToInt(roman string) int {
 	m := map[rune]int{
 		'I': 1,

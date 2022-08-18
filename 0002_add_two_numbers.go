@@ -1,8 +1,5 @@
 // https://leetcode.com/problems/add-two-numbers
-package leetcode
-
-import "github.com/junk1tm/leetcode/linkedlist"
-
+//
 // 0002. Add Two Numbers [Medium]
 //
 // You are given two non-empty linked lists representing two non-negative
@@ -15,10 +12,14 @@ import "github.com/junk1tm/leetcode/linkedlist"
 //
 // Constraints:
 //
-//    The number of nodes in each linked list is in the range [1, 100].
-//    0 <= Node.val <= 9
-//    It is guaranteed that the list represents a number that does not have leading zeros.
-//
+//	The number of nodes in each linked list is in the range [1, 100].
+//	0 <= Node.val <= 9
+//	It is guaranteed that the list represents a number that does not have leading zeros.
+
+package leetcode
+
+import "github.com/junk1tm/leetcode/linkedlist"
+
 func AddTwoNumbers(list1, list2 *linkedlist.Node[int]) *linkedlist.Node[int] {
 	list3 := new(linkedlist.Node[int])
 	temp := list3

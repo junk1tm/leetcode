@@ -1,6 +1,5 @@
 // https://leetcode.com/problems/merge-sorted-array
-package leetcode
-
+//
 // 0088. Merge Sorted Array [Easy]
 //
 // You are given two integer arrays nums1 and nums2, sorted in non-decreasing
@@ -17,12 +16,14 @@ package leetcode
 //
 // Constraints:
 //
-//    nums1.length == m + n
-//    nums2.length == n
-//    0 <= m, n <= 200
-//    1 <= m + n <= 200
-//    -109 <= nums1[i], nums2[j] <= 109
-//
+//	nums1.length == m + n
+//	nums2.length == n
+//	0 <= m, n <= 200
+//	1 <= m + n <= 200
+//	-109 <= nums1[i], nums2[j] <= 109
+
+package leetcode
+
 func MergeSortedArrays(numbers1, numbers2 []int, m, n int) {
 	for m > 0 && n > 0 {
 		if numbers1[m-1] > numbers2[n-1] {

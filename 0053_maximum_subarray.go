@@ -1,6 +1,5 @@
 // https://leetcode.com/problems/maximum-subarray
-package leetcode
-
+//
 // 0053. Maximum Subarray [Easy]
 //
 // Given an integer array nums, find the contiguous subarray (containing at
@@ -10,9 +9,11 @@ package leetcode
 //
 // Constraints:
 //
-//    1 <= nums.length <= 105
-//    -104 <= nums[i] <= 104
-//
+//	1 <= nums.length <= 105
+//	-104 <= nums[i] <= 104
+
+package leetcode
+
 func MaxSubArray(numbers []int) int {
 	sum, max := numbers[0], numbers[0]
 	for _, n := range numbers[1:] {

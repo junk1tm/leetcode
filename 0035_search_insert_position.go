@@ -1,6 +1,5 @@
 // https://leetcode.com/problems/search-insert-position
-package leetcode
-
+//
 // 0035. Search Insert Position [Easy]
 //
 // Given a sorted array of distinct integers and a target value, return the
@@ -11,11 +10,13 @@ package leetcode
 //
 // Constraints:
 //
-//    1 <= nums.length <= 104
-//    -104 <= nums[i] <= 104
-//    nums contains distinct values sorted in ascending order.
-//    -104 <= target <= 104
-//
+//	1 <= nums.length <= 104
+//	-104 <= nums[i] <= 104
+//	nums contains distinct values sorted in ascending order.
+//	-104 <= target <= 104
+
+package leetcode
+
 func SearchInsert(numbers []int, target int) int {
 	var k, middle int
 	for i, j := 0, len(numbers)-1; i <= j; {

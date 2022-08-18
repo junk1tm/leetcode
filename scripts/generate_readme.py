@@ -49,19 +49,14 @@ def main():
         if not re.fullmatch(r"^[0-9]{4}[a-z_]+.go$", filename):
             continue
 
-        header = ""
         with open(filename, "r") as f:
             COMMENT_PREFIX = "// "
-            # the first line is always a LeetCode link.
             link = f.readline().removeprefix(COMMENT_PREFIX).removesuffix("\n")
-            for line in f:
-                # the next comment after the link is a header...
-                if line.startswith(COMMENT_PREFIX):
-                    header = line.removeprefix(COMMENT_PREFIX).removesuffix("\n")
-                    break
+            f.readline()
+            header = f.readline().removeprefix(COMMENT_PREFIX).removesuffix("\n")
 
-        # ...that consists of the task's number, name and difficulty.
-        pattern = r"^([0-9]{4})\. ([a-zA-Z ()]+) \[(Easy|Medium|Hard)]$"
+        # the header consists of the task's number, name and difficulty.
+        pattern = r"^([0-9]{4})\. ([a-zA-Z ()]+) \[(Easy|Medium|Hard)\]$"
         match = re.fullmatch(pattern, header)
         assert match is not None
 

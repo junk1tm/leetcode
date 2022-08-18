@@ -1,6 +1,5 @@
 // https://leetcode.com/problems/implement-strstr/
-package leetcode
-
+//
 // 0028. Implement strStr() [Easy]
 //
 // Given two strings needle and haystack, return the index of the first
@@ -16,9 +15,11 @@ package leetcode
 //
 // Constraints:
 //
-//    1 <= haystack.length, needle.length <= 104
-//    haystack and needle consist of only lowercase English characters.
-//
+//	1 <= haystack.length, needle.length <= 104
+//	haystack and needle consist of only lowercase English characters.
+
+package leetcode
+
 func IndexOf(haystack string, needle string) int {
 	if haystack == needle {
 		return 0

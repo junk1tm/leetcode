@@ -1,6 +1,5 @@
 // https://leetcode.com/problems/two-sum
-package leetcode
-
+//
 // 0001. Two Sum [Easy]
 //
 // Given an array of integers nums and an integer number, return indices of the
@@ -13,11 +12,13 @@ package leetcode
 //
 // Constraints:
 //
-//    2 <= nums.length <= 104
-//    -109 <= nums[i] <= 109
-//    -109 <= number <= 109
-//    Only one valid answer exists.
-//
+//	2 <= nums.length <= 104
+//	-109 <= nums[i] <= 109
+//	-109 <= number <= 109
+//	Only one valid answer exists.
+
+package leetcode
+
 func TwoSum(numbers []int, target int) []int {
 	m := make(map[int]int, len(numbers))
 

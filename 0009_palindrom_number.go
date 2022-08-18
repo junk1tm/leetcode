@@ -1,6 +1,5 @@
 // https://leetcode.com/problems/palindrome-number
-package leetcode
-
+//
 // 0009. Palindrome Number [Easy]
 //
 // Given an integer x, return true if x is palindrome integer.
@@ -9,8 +8,10 @@ package leetcode
 //
 // Constraints:
 //
-//    -231 <= x <= 231 - 1
-//
+//	-231 <= x <= 231 - 1
+
+package leetcode
+
 func IsPalindrome(number int) bool {
 	if number < 0 {
 		return false

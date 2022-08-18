@@ -1,10 +1,5 @@
 // https://leetcode.com/problems/remove-duplicates-from-sorted-array
-package leetcode
-
-import (
-	"sort"
-)
-
+//
 // 0026. Remove Duplicates from Sorted Array [Easy]
 //
 // Given an integer array nums sorted in non-decreasing order, remove the
@@ -24,10 +19,14 @@ import (
 //
 // Constraints:
 //
-//    1 <= nums.length <= 3 * 104
-//    -100 <= nums[i] <= 100
-//    nums is sorted in non-decreasing order.
-//
+//	1 <= nums.length <= 3 * 104
+//	-100 <= nums[i] <= 100
+//	nums is sorted in non-decreasing order.
+
+package leetcode
+
+import "sort"
+
 func RemoveDuplicates(numbers []int) int {
 	const max = 100
 

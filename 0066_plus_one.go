@@ -1,6 +1,5 @@
 // https://leetcode.com/problems/plus-one
-package leetcode
-
+//
 // 0066. Plus One [Easy]
 //
 // You are given a large integer represented as an integer array digits, where
@@ -12,10 +11,12 @@ package leetcode
 //
 // Constraints:
 //
-//    1 <= digits.length <= 100
-//    0 <= digits[i] <= 9
-//    digits does not contain any leading 0's.
-//
+//	1 <= digits.length <= 100
+//	0 <= digits[i] <= 9
+//	digits does not contain any leading 0's.
+
+package leetcode
+
 func PlusOne(digits []int) []int {
 	overflow := 1 // start with +1
 	for i := len(digits) - 1; i >= 0; i-- {

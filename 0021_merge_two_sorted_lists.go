@@ -1,8 +1,5 @@
 // https://leetcode.com/problems/merge-two-sorted-lists
-package leetcode
-
-import "github.com/junk1tm/leetcode/linkedlist"
-
+//
 // 0021. Merge Two Sorted Lists [Easy]
 //
 // You are given the heads of two sorted linked lists list1 and list2.
@@ -14,10 +11,14 @@ import "github.com/junk1tm/leetcode/linkedlist"
 //
 // Constraints:
 //
-//    The number of nodes in both lists is in the range [0, 50].
-//    -100 <= Node.val <= 100
-//    Both list1 and list2 are sorted in non-decreasing order.
-//
+//	The number of nodes in both lists is in the range [0, 50].
+//	-100 <= Node.val <= 100
+//	Both list1 and list2 are sorted in non-decreasing order.
+
+package leetcode
+
+import "github.com/junk1tm/leetcode/linkedlist"
+
 func MergeTwoLists(list1, list2 *linkedlist.Node[int]) *linkedlist.Node[int] {
 	if list1 == nil {
 		return list2
