@@ -36,8 +36,8 @@ TEMPLATE = """\
 
 ### Solutions
 
-|  #  | Title | Difficulty | Solution |
-|:---:|:------|:----------:|:--------:|
+|  #  | Title | Difficulty | Solution | Tests |
+|:---:|:------|:----------:|:--------:|:-----:|
 """
 
 
@@ -78,7 +78,7 @@ def main():
     with open("README.md", "w") as f:
         f.write(TEMPLATE.format(**total))
         for p in problems:
-            f.write(f"|{p.number}|[{p.title}]({p.link})|{p.difficulty}|{p.file} {p.test}|\n")  # fmt: skip
+            f.write(f"|{p.number}|[{p.title}]({p.link})|{p.difficulty}|{p.file}|{p.test}|\n")  # fmt: skip
 
 
 if __name__ == "__main__":
