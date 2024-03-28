@@ -1,3 +1,3 @@
-module github.com/junk1tm/leetcode
+module leetcode
 
 go 1.18

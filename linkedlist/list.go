@@ -1,8 +1,6 @@
 package linkedlist
 
-import (
-	"fmt"
-)
+import "fmt"
 
 type Node[T comparable] struct {
 	Value T

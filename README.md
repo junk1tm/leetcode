@@ -1,14 +1,8 @@
-# LeetCode
+# leetcode
 
-[![ci-img]][ci]
-[![license-img]][license]
+[![checks](https://github.com/tmzane/leetcode/actions/workflows/checks.yml/badge.svg)](https://github.com/tmzane/leetcode/actions/workflows/checks.yml)
 
-[ci]: https://github.com/junk1tm/leetcode/actions/workflows/go.yml
-[ci-img]: https://github.com/junk1tm/leetcode/actions/workflows/go.yml/badge.svg
-[license]: https://github.com/junk1tm/leetcode/blob/main/LICENSE
-[license-img]: https://img.shields.io/github/license/junk1tm/leetcode
-
-> A collection of my [LeetCode](https://leetcode.com) solutions written in Go
+My [LeetCode](https://leetcode.com) solutions written in Go.
 
 ## Progress
 

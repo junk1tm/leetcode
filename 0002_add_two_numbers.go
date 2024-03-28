@@ -18,7 +18,7 @@
 
 package leetcode
 
-import "github.com/junk1tm/leetcode/linkedlist"
+import "leetcode/linkedlist"
 
 func AddTwoNumbers(list1, list2 *linkedlist.Node[int]) *linkedlist.Node[int] {
 	list3 := new(linkedlist.Node[int])

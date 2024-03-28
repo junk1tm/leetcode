@@ -13,7 +13,7 @@
 
 package leetcode
 
-import "github.com/junk1tm/leetcode/linkedlist"
+import "leetcode/linkedlist"
 
 func DeleteDuplicates(list *linkedlist.Node[int]) *linkedlist.Node[int] {
 	if list == nil || list.Next == nil {

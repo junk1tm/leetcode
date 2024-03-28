@@ -5,8 +5,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/junk1tm/leetcode"
-	"github.com/junk1tm/leetcode/linkedlist"
+	"leetcode"
+	"leetcode/linkedlist"
 )
 
 // 0001. Two Sum [Easy]

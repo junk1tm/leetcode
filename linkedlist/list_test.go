@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/junk1tm/leetcode/linkedlist"
+	"leetcode/linkedlist"
 )
 
 func TestNew(t *testing.T) {
