@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 
+import json
 import sys
 import unicodedata
 from html import parser
-
-import requests
+from urllib import request
 
 
 class HTMLFilter(parser.HTMLParser):
@@ -50,8 +50,16 @@ def main() -> None:
         "variables": {"titleSlug": title},
         "query": GRAPHQL_QUERY,
     }
-    r = requests.post("https://leetcode.com/graphql", json=payload)
-    data = r.json()["data"]["question"]
+    body = json.dumps(payload).encode()
+
+    headers = {
+        "Content-Type": "application/json",
+        "User-Agent": "Mozilla/5.0",
+    }
+
+    req = request.Request("https://leetcode.com/graphql", data=body, headers=headers, method="POST")
+    with request.urlopen(req) as resp:
+        data = json.load(resp)["data"]["question"]
 
     number = int(data["questionId"])
     html = str(data["content"])
