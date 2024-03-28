@@ -37,7 +37,7 @@ My [LeetCode](https://leetcode.com) solutions written in Go.
 """
 
 
-def main():
+def main() -> None:
     problems: list[Problem] = []
     total: dict[str, int] = {"Easy": 0, "Medium": 0, "Hard": 0}
 
@@ -45,11 +45,10 @@ def main():
         if not re.fullmatch(r"^[0-9]{4}[a-z_]+.go$", filename):
             continue
 
-        with open(filename, "r") as f:
-            COMMENT_PREFIX = "// "
-            link = f.readline().removeprefix(COMMENT_PREFIX).removesuffix("\n")
+        with open(filename) as f:
+            link = f.readline().removeprefix("// ").removesuffix("\n")
             f.readline()
-            header = f.readline().removeprefix(COMMENT_PREFIX).removesuffix("\n")
+            header = f.readline().removeprefix("// ").removesuffix("\n")
 
         # the header consists of the task's number, name and difficulty.
         pattern = r"^([0-9]{4})\. ([a-zA-Z ()]+) \[(Easy|Medium|Hard)\]$"
@@ -65,7 +64,7 @@ def main():
         problems.append(p)
         total[p.difficulty] += 1
 
-    with open("solutions_test.go", "r") as f:
+    with open("solutions_test.go") as f:
         it = iter(problems)
         for i, line in enumerate(f):
             if re.match(r"^// [0-9]{4}\.", line):
@@ -74,7 +73,7 @@ def main():
     with open("README.md", "w") as f:
         f.write(TEMPLATE.format(**total))
         for p in problems:
-            f.write(f"|{p.number}|[{p.title}]({p.link})|{p.difficulty}|{p.file}|{p.test}|\n")  # fmt: skip
+            f.write(f"|{p.number}|[{p.title}]({p.link})|{p.difficulty}|{p.file}|{p.test}|\n")
 
 
 if __name__ == "__main__":

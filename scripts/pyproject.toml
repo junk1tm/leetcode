@@ -1,0 +1,16 @@
+[tool.mypy]
+strict = true
+pretty = true
+
+[tool.ruff]
+line-length = 999
+
+[tool.ruff.lint]
+select = [
+    "F",  # pyflakes
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "I",  # isort
+    "N",  # pep8-naming
+    "UP", # pyupgrade
+]

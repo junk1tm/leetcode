@@ -42,7 +42,7 @@ query questionData($titleSlug: String!) {
 """
 
 
-def main():
+def main() -> None:
     title = sys.argv[1]  # in kebab-case
 
     payload = {
@@ -59,17 +59,14 @@ def main():
     text = text.replace("\n", "\n// ")  # comment all lines
     text = unicodedata.normalize("NFKD", text)  # remove <0xa0>
 
-    LANG_SLUG = "golang"
-
     code = "package leetcode\n\n"
     for snippet in list(data["codeSnippets"]):
-        if snippet["langSlug"] == LANG_SLUG:
+        if snippet["langSlug"] == "golang":
             code += str(snippet["code"])
             break
 
     filename = f"{number:04}_{title.replace('-', '_')}.go"
     with open(filename, "w") as f:
-        # fmt: off
         f.write(f"""\
 // https://leetcode.com/problems/{title}
 //
@@ -79,7 +76,6 @@ def main():
 
 {code}
 """)
-        # fmt: on
 
 
 if __name__ == "__main__":
